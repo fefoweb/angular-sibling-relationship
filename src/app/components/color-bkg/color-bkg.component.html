@@ -1,0 +1,23 @@
+<div *ngIf="color$ | async as color" [ngStyle]="{'background': color.bkg}">
+  <span [ngStyle]="{'color': color.frg}">Changed color text?</span>
+</div>
+<div
+  [ngClass]="'colorBox'"
+  *ngIf="color$ | async as color"
+  [ngStyle]="{'background': color.bkg}"
+>
+  <strong>BACKGROUND</strong>
+  <span>R: {{color.bkgRGB[0]}}</span>
+  <span>G: {{color.bkgRGB[1]}}</span>
+  <span>B: {{color.bkgRGB[2]}}</span>
+</div>
+<div
+  [ngClass]="'colorBox'"
+  *ngIf="color$ | async as color"
+  [ngStyle]="{'background': color.frg}"
+>
+  <strong>FOREGROUND</strong>
+  <span>R: {{color.frgRGB[0]}}</span>
+  <span>G: {{color.frgRGB[1]}}</span>
+  <span>B: {{color.frgRGB[2]}}</span>
+</div>

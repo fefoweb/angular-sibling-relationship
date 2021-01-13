@@ -1,0 +1,26 @@
+div {
+  margin: 1rem 0 1rem 1.5rem;
+  width: 98%;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.colorBox {
+  width: 48%;
+  line-height: 1.5rem;
+  float: left;
+  margin: 1rem 0 1rem 1.5rem;
+  strong {
+    display: block;
+  }
+  span {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .colorBox {
+    width: 40%;
+  }
+}

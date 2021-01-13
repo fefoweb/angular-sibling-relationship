@@ -1,0 +1,18 @@
+<div>
+  <ng-container *ngIf="color$ | async as color">
+    <input
+      #pickerbkg
+      type="color"
+      [value]="color.bkg"
+      (change)="updateBackground(pickerbkg.value)"
+    />
+
+    <input
+      #pickerfrg
+      type="color"
+      [value]="color.frg"
+      (change)="updateForeground(pickerfrg.value)"
+    />
+  </ng-container>
+  <div></div>
+</div>
